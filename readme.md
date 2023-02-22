@@ -21,19 +21,32 @@ Output Format
 For each test-case: output on a single line, the total number of capital letters in the T-th line.
 
 Sample Input
+
 5
+
 Hey Guys
+
 Welcome to EndSem
+
 HoPe YOU LiKEd This COUrsE
+
 RegaRDs
+
 CPro TAs
 
+
 Sample Output
+
 2
+
 3
+
 13
+
 3
+
 4
+
 
 # Question 2 : Largest Subarray Sum
 
@@ -45,25 +58,37 @@ The first line contains a single integer N denoting the size of the initial arra
 The second line consists of N space-separated integers A1,A2,…,AN denoting the array A.
 
 Input constraints
+
 1≤N≤1e3
+
 −1e9≤Ai≤1e9
 
 Output Format
 Output a single integer that denotes the largest contiguous subarray sum.
 
 Sample Input 1
+
 3
+
 1 2 3
 
+
 Sample Output 1
+
 6
 
+
 Sample Input 2
+
 5
+
 1 2 3 -5 6
 
+
 Sample Output 2
+
 7
+
 
 # Question 3 : Enumerate
 
@@ -83,18 +108,30 @@ Output Format
 Output all enumerations of strings of length K of the alphabet set {1,2,…,N}
 
 Sample Input 1
+
 3 2
 
+
 Sample Output 1
+
 1 1
+
 1 2
+
 1 3
+
 2 1
+
 2 2
+
 2 3
+
 3 1
+
 3 2
+
 3 3
+
 
 # Question 4 : Sudoku
 
@@ -110,11 +147,18 @@ Each element of the grid belongs to the set {1,2,3,4,'*'} Here the '*' denotes a
 Output Format
 Output the total number of different valid solutions for this puzzle. (A valid solution to a sudoku puzzle must have every row, every column and every 2x2 box containing all the digits 1,2,3,4 occuring only once)
 
+
 Sample Input 1
+
 1*3*
+
 **2*
+
 ****
+
 *4*1
 
+
 Sample Output 1
+
 0

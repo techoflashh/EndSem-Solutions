@@ -142,22 +142,20 @@ Input Format
 The input contains a 4x4 character grid, which is an instance of a 4x4 sudoku puzzle.
 
 Input constraints
-Each element of the grid belongs to the set {1,2,3,4,'*'} Here the '*' denotes an empty slot, which can be filled with any number
+Each element of the grid belongs to the set {1,2,3,4,'\*'} Here the '*' denotes an empty slot, which can be filled with any number
 
 Output Format
 Output the total number of different valid solutions for this puzzle. (A valid solution to a sudoku puzzle must have every row, every column and every 2x2 box containing all the digits 1,2,3,4 occuring only once)
 
-
 Sample Input 1
 
-1*3*
+1\*3\*
 
-**2*
+\**2\*
 
-****
+\****
 
-*4*1
-
+\*4\*1
 
 Sample Output 1
 

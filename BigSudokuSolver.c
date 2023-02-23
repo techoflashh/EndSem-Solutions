@@ -2,26 +2,26 @@
 #include<stdbool.h>
 
 int COUNT=0;
-bool check(char grid[4][4],int row,int coulumn,char e){
-    for (int i=0;i<4;i++){
+bool check(char grid[9][9],int row,int coulumn,char e){
+    for (int i=0;i<9;i++){
         if (grid[row][i]==e){
             return false;
         }
         if (grid[i][coulumn]==e){
             return false;
         }
-        if (grid[2*(row/2) + i/2][2*(coulumn/2) + i%2]==e){
+        if (grid[3*(row/3) + i/3][3*(coulumn/3) + i%3]==e){
             return false;
         }
     }   
     return true;
 }
 
-bool solutions(char grid[4][4],char* arr){
-    for (int row=0;row<4;row++){
-        for (int col=0;col<4;col++){
-            if (grid[row][col]=='*'){
-                for (int i=0;i<4;i++){
+bool solutions(char grid[9][9],char* arr){
+    for (int row=0;row<9;row++){
+        for (int col=0;col<9;col++){
+            if (grid[row][col]=='0'){
+                for (int i=0;i<9;i++){
                     if (check(grid,row,col,arr[i])){
                         grid[row][col]=arr[i];
                         bool temp = solutions(grid,arr);
@@ -29,7 +29,7 @@ bool solutions(char grid[4][4],char* arr){
                             return true;
                         }
                         else{
-                            grid[row][col]='*';
+                            grid[row][col]='0';
                         }
                     }
                 }
@@ -40,16 +40,16 @@ bool solutions(char grid[4][4],char* arr){
     return true;
 }
 int main(){
-    char grid[4][4];
-    for (int i=0;i<4;i++){
-        for (int j=0;j<4;j++){
+    char grid[9][9];
+    for (int i=0;i<9;i++){
+        for (int j=0;j<9;j++){
             scanf(" %c",&grid[i][j]);
         }
     }
-    char arr[4] = {'1','2','3','4'};
+    char arr[9] = {'1','2','3','4','5','6','7','8','9'};
     if (solutions(grid,arr)){
-        for (int i=0;i<4;i++){
-            for (int j=0;j<4;j++){
+        for (int i=0;i<9;i++){
+            for (int j=0;j<9;j++){
                 printf("%c ",grid[i][j]);
             }
             printf("\n");

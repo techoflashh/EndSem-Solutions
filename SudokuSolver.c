@@ -27,7 +27,6 @@ bool solutions(char grid[4][4],char* arr){
                         grid[row][col]=arr[i];
                         bool temp = solutions(grid,arr);
                         if (temp==true){
-                            // COUNT++;
                             return true;
                         }
                         else{
@@ -39,7 +38,6 @@ bool solutions(char grid[4][4],char* arr){
             }
         }
     }
-    // COUNT++;
     return true;
 }
 int main(){
@@ -50,7 +48,6 @@ int main(){
         }
     }
     char arr[4] = {'1','2','3','4'};
-    // solutions(grid,arr);
     if (solutions(grid,arr)){
         for (int i=0;i<4;i++){
             for (int j=0;j<4;j++){
@@ -58,6 +55,7 @@ int main(){
             }
             printf("\n");
         }
+    }else {
+        printf("No Solutions Possible!\n");
     }
-    printf("%d\n",COUNT);
 }

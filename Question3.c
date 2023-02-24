@@ -1,18 +1,16 @@
 #include<stdio.h>
-void permute(int n,int k,int len,int pos,int* comb,int arr[n]){
+void permute(int n,int k,int len,int* comb,int arr[n]){
     if (len==k){
         for (int i=0;i<k;i++){
             printf("%d ",comb[i]);
         }
         printf("\n");
-    }
-    else if (pos>=k || len>k){
         return;
     }
     else{
         for (int i=0;i<n;i++){
             comb[len] = arr[i];
-            permute(n,k,len+1,pos+1,comb,arr);
+            permute(n,k,len+1,comb,arr);
         }
     }
 }
@@ -25,6 +23,6 @@ int main(){
     for (int i=0;i<n;i++){
         arr[i] = i+1;
     }
-    permute(n,k,0,0,comb,arr);
+    permute(n,k,0,comb,arr);
     return 0;
 }

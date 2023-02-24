@@ -24,22 +24,6 @@ bool check(char grid[4][4], int row, int coulumn, char e)
 
 void solutions(char grid[4][4], char *arr, int row, int col)
 {
-    if (row == 3 && col==3)
-    {
-        if (grid[3][3]=='*'){
-            for (int i = 0; i < 4; i++)
-            {
-                if (check(grid,row,col,arr[i])){
-                    COUNT++;
-                    return;
-                }
-            }
-        }
-        else{
-            COUNT++;
-            return;
-        }
-    }
     if (row == 4){
         COUNT++;
         return;
